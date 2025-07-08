@@ -1,0 +1,470 @@
+:root {
+  --primary-blue: #004080;
+  --accent-blue: #177ce2;
+  --highlight: #ffd700;
+  --light-bg: #f4f4f4;
+  --card-bg: #fff;
+  --section-bg: #ebeef3;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  text-align: center;
+  font-size: 1rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.94rem;
+}
+
+.logo-container {
+  background-color: var(--primary-blue);
+  display: inline-block;
+  padding: 0.31rem;
+}
+
+.logo {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+}
+
+#home, #gallery, #contact {
+  scroll-margin-top: 165px;
+}
+
+#home {
+  background: url("../images/ice-rink.jpg") no-repeat center center;
+  background-size: cover;
+  color: #222;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  padding: 3.13rem 3.13rem 0.63rem 3.13rem;
+  border-radius: 10px;
+  min-height: 25rem;
+}
+
+#home h2 {
+  font-size: 2.5rem;
+  text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+#home p {
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.sports-stable.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.sports-stable-logo {
+  width: 13.75rem;
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.sports-stable-logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.sports-stable-tagline {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #222;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 0.94rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 3.13rem;
+  background: var(--section-bg);
+  margin: 1.25rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.sponsor-logo {
+  max-width: 100%;
+  height: 80px;              /* Keeps your original size */
+  object-fit: contain;
+  margin-bottom: 8px;
+  margin-right: 10px;
+}
+
+.sponsor-logo:hover {
+  filter: brightness(1.2);
+}
+
+.sponsors ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsors ul li {
+  display: flex;
+  flex-direction: column;     /* Stack logo and text */
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  max-width: 200px;
+}
+
+.sponsors ul li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sponsor-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+/* Contact Form Styles */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #f4f6fb;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #177ce2;
+  font-size: 1rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #125fa4;
+  background-color: #e9f0ff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button.btn {
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: #177ce2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.contact-form button.btn:hover {
+  background-color: #125fa4;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 80%;               /* or 70%, adjust as you like */
+  margin: 0 auto;           /* centers the input */
+  display: block;           /* ensures margin auto works */
+}
+
+
+
+footer {
+  background: var(--primary-blue);
+  color: #fff;
+  padding: 0.63rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #aaddff;
+}
+
+@media (max-width: 768px) {
+  .sports-stable {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  .sports-stable-logo-wrapper,
+  .sports-stable-logo {
+    width: 100%;
+    max-width: 18.75rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo-container {
+    margin-bottom: 0.63rem;
+  }
+  #home h2 {
+    font-size: 2rem;
+  }
+  #home p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header, nav, main {
+    padding: 0.63rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  section {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .sponsors ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sponsors ul li {
+    max-width: 90%;
+  }
+}
+
+
+
+.inductee-list {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  text-align: left;
+  padding: 1.25rem;
+  overflow-x: auto;
+}
+
+.inductee-card {
+  background-color: var(--card-bg);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow-card);
+}
+
+.inductee-card h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+}
+
+.inductee-card p {
+  margin: 0.3em 0;
+}
+
+.accordion {
+  background-color: var(--accent-blue);
+  color: #fff;
+  cursor: pointer;
+  padding: 0.88rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.31rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+  background-color: #125fa4;
+}
+
+.accordion[aria-expanded="true"] {
+  background: #f8eb39;
+  color: #004080;
+}
+
+.panel {
+  display: none;
+}
+
+/* Accessibility: Focus styles for keyboard navigation */
+a:focus,
+button:focus,
+.btn:focus,
+.accordion:focus,
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.accordion:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 10000;
+  background: #ffd700;
+  color: #222;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  outline: 2px solid #004080;
+  outline-offset: 2px;
+}
+
+.panel {
+  padding: 0.63rem 1.13rem;
+  background-color: #fff;
+  display: none;
+  overflow: hidden;
+  border-left: 4px solid var(--accent-blue);
+  margin-bottom: 0.94rem;
+  border-radius: 0 0 6px 6px;
+}
+
+.homepage-buttons {
+  margin-top: 1.88rem;
+}
+
+/* Unified .btn styles */
+.btn {
+  display: inline-block;
+  margin: 0.63rem;
+  padding: 0.75em 1.5em;
+  background-color: var(--primary-blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #125fa4;
+}
+
+/* Inductee scroll bar for mobile overflow */
+.inductee-scroll {
+  position: sticky;
+  top: 70px; /* Adjust if your header is a different height */
+  z-index: 999; /* Ensure it stays above the content but below the header if needed */
+  overflow: hidden;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 10px 0;
+  border-bottom: 3px solid #177ce2;
+}
+
+.scroll-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+.inductee-scroll span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.scroll-track:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+

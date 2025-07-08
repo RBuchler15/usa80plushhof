@@ -1,0 +1,321 @@
+/* Inductee accordion button styles */
+.accordion {
+  background: linear-gradient(90deg, #001f4d 60%, #ffd700 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.accordion:hover, .accordion:focus {
+  background: linear-gradient(90deg, #ffd700 60%, #001f4d 100%);
+  color: #001f4d;
+}
+/* Navbar link hover effect */
+.navbar-nav .nav-link.text-white:hover, .navbar-nav .nav-link.text-white:focus {
+  color: #ffd700 !important; /* Gold color on hover */
+  text-decoration: underline;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    position:sticky;
+    top: 0;
+    z-index: 1000;    
+    background: #177ce2;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Adds space between logo and text */
+}
+
+.logo-container {
+    background-color: #177ce2; /* Match header color */
+    display: inline-block;
+    padding: 5px; /* Optional: tweak as needed */
+  }
+  
+
+.logo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
+
+  
+#home {
+    background: url("../images/ice-rink.jpg") no-repeat center center;
+    background-size: cover;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    padding: 50px 50px 10px 50px;
+    border-radius: 10px;
+    min-height: 400px;
+}
+
+
+#home h2 {
+    font-size: 2.5rem; /* Bigger heading */
+    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+#home p {
+    font-size: 1.2rem; /* Bigger paragraph text */
+    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
+}
+
+.sports-stable.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.sports-stable-logo {
+  width: 220px;
+  height: auto;
+}
+
+.sports-stable-tagline {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: black;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+    background: rgb(235, 238, 243);;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background: #004080;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sports-stable {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .sports-stable-logo-wrapper,
+  .sports-stable-logo {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.inductee-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.inductee-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inductee-card h3 {
+  margin-top: 0;
+  color: #177ce2;
+}
+
+.inductee-card p {
+  margin: 0.3em 0;
+}
+
+.accordion {
+  background-color: #177ce2;
+  color: white;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+  background-color: #125fa4;
+}
+
+.panel {
+  padding: 10px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  border-left: 4px solid #177ce2;
+  margin-bottom: 15px;
+  border-radius: 0 0 6px 6px;
+}
+
+.inductee-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.homepage-buttons {
+  margin-top: 30px;
+}
+
+.homepage-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #177ce2;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.homepage-buttons .btn:hover {
+  background-color: #125fa4;
+}
+
+.btn, button, input[type="submit"], input[type="button"] {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #c00 !important;
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.btn:hover, button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  background-color: #a30000 !important;
+  color: #fff !important;
+}
+
+.sports-stable-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(1.1);
+}
+
+.inductee-scroll {
+  overflow: hidden;
+  background-color: #004080;
+  color: white;
+  padding: 10px 0;
+  border-bottom: 3px solid #177ce2;
+}
+
+.scroll-track {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.inductee-scroll span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.scroll-track:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline; /* optional, helps show it’s a link */
+}
+
+footer a:hover {
+  color: #aaddff; /* lighter blue on hover for nice effect */
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container {
+    margin-bottom: 10px; /* Space between logo and text */
+  }
+
+  #home h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  #home p {
+    font-size: 1rem; /* Smaller paragraph text on mobile */
+  }
+}
+
+/* css/custom.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+}

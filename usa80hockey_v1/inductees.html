@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hall of Fame Inductees</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <a href="#home" class="skip-link">Skip to main content</a>
+  <header>
+    <div class="logo-container">
+           <img src="images/logo_transparent.png" alt="USA 80+ Hockey Hall of Fame Logo" class="logo">
+          </div>
+    <h1>USA 80+ Hockey Hall of Fame Inductees</h1>
+
+    <nav role="navigation">
+    <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="inductees.html">Inductees</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+</nav>
+  </header>
+
+  <main>
+    <section class="inductee-list">
+      <h2>2025 Inductees</h2>
+
+      <div class="inductee-entry">
+        <button class="accordion" aria-expanded="false" aria-controls="panel-merchant" id="accordian-merchant">Fred Merchant</button>
+        <div class="panel" id="panel-merchant" role="region" aria-labelledby="accordian-merchant">
+          <p><strong>2025 USA 80+ HOCKEY HALL OF FAME INDUCTEE</strong></p>
+          <p><strong>FRED MERCHANT (1937– )</strong><br>
+          Cape Breton, Nova Scotia → Boulder, Colorado</p>
+          <p><em>A LIFE ON ICE – FROM THE MARITIMES TO THE MOUNTAINS</em><br>
+          Fred Merchant’s hockey journey began in Cape Breton, Nova Scotia, where he laced up the skates at age 12. After playing junior and varsity hockey until age 21, life took Fred away from the rink for nearly five decades. Remarkably, he returned to the game at age 69 and hasn’t looked back. Now residing in Boulder, Colorado, he continues to lace up twice a week with the 50+ group in Superior, CO, and has played in many tournaments throughout the U.S. and Canada.</p>
+          <ul>
+            <li>Junior and varsity player; standout penalty killer</li>
+            <li>Played in Canada Cup (USA vs. Canada)</li>
+            <li>Plays twice a week + tournaments</li>
+            <li>Author of “The Real Iron Men of Hockey”</li>
+            <li>Founder of USA 80+ HHOF & board member, Canada 80+ HHOF</li>
+          </ul>
+          <p><strong>Why He Plays:</strong> "Hockey players are special people."</p>
+          <p><strong>What He Loves Most:</strong> The camaraderie, tradition, and hockey family across generations.</p>
+          <p><strong>Congratulations</strong> to Fred Merchant — a comeback skater, team-first player, and spirit-of-the-game ambassador.</p>
+        </div>
+      </div>
+
+      <div class="inductee-entry">
+        <button class="accordion" aria-expanded="false" aria-controls="panel-mckinnon" id="accordian-mckinnon">Ken McKinnon</button>
+        <div class="panel" id="panel-mckinnon" role="region" aria-labelledby="accordian-mckinnon">
+          <p><strong>2025 USA 80+ HOCKEY HALL OF FAME INDUCTEE</strong></p>
+          <p><strong>KEN McKINNON (b. 1939)</strong><br>
+          Toronto, Ontario → Alton Bay, New Hampshire</p>
+          <p><em>A LIFE ON ICE – FROM VARSITY TO VETERAN</em><br>
+          Ken began skating at 8 years old in Toronto and never stopped. The first Canadian to play varsity hockey at UNH, he also skated in the Ottawa O.H.A. and refereed for 25 years in the ECAC. A lifelong contributor to the game both on and off the ice.</p>
+          <ul>
+            <li>UNH Varsity & Junior O.H.A. player</li>
+            <li>Left Wing, #14</li>
+            <li>Played USA vs. Canada in Canada Cup</li>
+            <li>Referee in ECAC for 25 years</li>
+          </ul>
+          <p><strong>Why He Plays:</strong> "The friendships keep us going at this game. To sit is to rust. To be active is to achieve."</p>
+          <p><strong>What He Loves Most:</strong> The camaraderie and the game itself.</p>
+          <p><strong>Congratulations</strong> to Ken McKinnon — a true sportsman whose lifelong dedication to hockey is an inspiration.</p>
+        </div>
+      </div>
+
+      <button class="accordion" aria-expanded="false" aria-controls="panel-sertich" id="accordion-sertich">Mark Sertich</button>
+      <div class="panel" id="panel-sertich" role="region" aria-labelledby="accordion-sertich"> 
+          <p><strong>2025 USA 80+ HOCKEY HALL OF FAME INDUCTEE</strong></p>
+          <p><strong>MARK SERTICH (1921–2020)</strong><br>
+          Ashland, Wisconsin → Duluth, Minnesota</p>
+          <p><em>A LIFE ON ICE - THE WORLD'S OLDEST HOCKEY PLAYER</em><br>
+          Mark Sertich skated for nearly a century. A proud beer league player who played over 13,800 games and tournaments, he skated three times a week well into his late 90s. Guinness World Records officially named him the oldest hockey player in the world.</p>
+          <ul>
+            <li>Recreational player; wore jersey #7</li>
+            <li>Played over 13,800 games</li>
+            <li>3x/week into his late 90s</li>
+            <li>Completed 11 inline marathons after age 75</li>
+            <li>Loved chili, spaghetti, and fish twice a week</li>
+          </ul>
+          <p><strong>Why He Played:</strong> "There is always a danger of injury, but over the years of playing, I don't remember ever doubting if I should keep playing."</p>
+          <p><strong>What He Loved Most:</strong> The camaraderie. The joy. The game itself.</p>
+          <p><strong>Congratulations</strong> to Mark Sertich — a skater, gentleman, and inspiration to anyone who believes age is just a number.</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 USA 80+ Hockey Hall of Fame. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !isOpen);
+        panel.style.display = isOpen ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

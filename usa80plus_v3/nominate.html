@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nominate | USA 80+ Hockey Hall of Fame</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #001f4d;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/logo_transparent.png" alt="USA 80+ HHOF Logo" style="height:60px; width:auto; margin-right:14px;">
+        USA 80+ HHOF
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="inductees.html">Inductees</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="nominate.html">Nominate</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container py-5">
+      <h2 class="mb-4 text-center">Nominate an 80+ Hockey Hall of Fame Candidate</h2>
+      <form action="https://formsubmit.co/info@usa80plusHHOF.com" method="POST" class="mx-auto" style="max-width:600px;">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://usa80plusHHOF.com/thank-you.html">
+        <input type="hidden" name="FormType" value="Nomination">
+        <input type="text" name="_honey" style="display:none">
+        <div class="mb-3">
+          <label for="nomineeName" class="form-label">Nominee's Name:</label>
+          <input type="text" id="nomineeName" name="Nominee Name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="nomineeAge" class="form-label">Nominee's Age (must be 80+):</label>
+          <input type="number" id="nomineeAge" name="Nominee Age" class="form-control" min="80" required>
+        </div>
+        <div class="mb-3">
+          <label for="nomineeLocation" class="form-label">Nominee's Location:</label>
+          <input type="text" id="nomineeLocation" name="Nominee Location" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="nomineeAchievements" class="form-label">Nominee's Achievements/Contributions:</label>
+          <textarea id="nomineeAchievements" name="Nominee Achievements" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="nominatorName" class="form-label">Your Name:</label>
+          <input type="text" id="nominatorName" name="Nominator Name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="nominatorEmail" class="form-label">Your Email:</label>
+          <input type="email" id="nominatorEmail" name="Nominator Email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="relationship" class="form-label">Your Relationship to Nominee:</label>
+          <input type="text" id="relationship" name="Relationship" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="additionalInfo" class="form-label">Additional Information (optional):</label>
+          <textarea id="additionalInfo" name="Additional Info" class="form-control" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit Nomination</button>
+      </form>
+    </section>
+  </main>
+
+  <footer style="background-color: #001f4d; color: #fff; padding: 1.5rem 0; text-align: center;">
+    <p class="mb-0">&copy; 2025 USA 80+ Hockey Hall of Fame. All rights reserved.</p>
+    <p class="mb-0">Inspired by <a href="https://therealironmenofhockey.com/" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">The Real Iron Men of Hockey</a></p>
+    <p class="mb-0">Board member bios and info courtesy of <a href="https://www.TeamUSAPlayers.org" target="_blank" rel="noopener noreferrer" style="color:#ffd700;">Team USA Players</a></p>        
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
