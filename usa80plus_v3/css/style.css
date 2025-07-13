@@ -345,7 +345,7 @@ body {
   margin-left: -50vw;
   margin-right: -50vw;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('../assets/img/net and puck.jpg') center center/cover no-repeat;
+              url('../assets/img/stickbackground.png') center center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -354,5 +354,79 @@ body {
   padding: 3rem 1.5rem;
 }
 
+.about-section {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  text-align: left;
+}
 
+.about-section h1, .about-section h2 {
+  color: #c00;
+  margin-bottom: 20px;
+}
 
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.hero-section-about {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('../images/about-hero.jpg') center center/cover no-repeat;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-section-about h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero-section-about p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+footer {
+  background-color: #001f4d;
+  color: white;
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ffd700;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+.bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.7); /* white at 70% opacity */
+  /* Optional: keep rounded corners and shadow */
+  border-radius: 0.25rem;  /* same as Bootstrap .rounded */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* similar to Bootstrap .shadow */
+}
+
+.full-width-divider {
+  background-color: #fff;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  z-index: 1;
+}
+
+#sponsors img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
