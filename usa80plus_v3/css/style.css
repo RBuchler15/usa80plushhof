@@ -1,82 +1,89 @@
-/* Inductee accordion button styles */
-.accordion {
-  background: linear-gradient(90deg, #001f4d 60%, #ffd700 100%);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  padding: 1rem 1.5rem;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-}
-.accordion:hover, .accordion:focus {
-  background: linear-gradient(90deg, #ffd700 60%, #001f4d 100%);
-  color: #001f4d;
-}
-/* Navbar link hover effect */
-.navbar-nav .nav-link.text-white:hover, .navbar-nav .nav-link.text-white:focus {
-  color: #ffd700 !important; /* Gold color on hover */
-  text-decoration: underline;
-}
+
+/* ===========================
+   Base / Reset Styles
+=========================== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0px;
-    background-color: #f4f4f4;
-    text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  text-align: center; /* Consider limiting this if affects layout */
 }
 
+/* ===========================
+   Header and Navbar
+=========================== */
 header {
-    position:sticky;
-    top: 0;
-    z-index: 1000;    
-    background: #177ce2;
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px; /* Adds space between logo and text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #177ce2;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .logo-container {
-    background-color: #177ce2; /* Match header color */
-    display: inline-block;
-    padding: 5px; /* Optional: tweak as needed */
-  }
-  
+  background-color: #177ce2;
+  display: inline-block;
+  padding: 5px;
+}
 
 .logo {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
+  width: 150px;
+  height: auto;
 }
-
   
-#home {
-    background: url("../images/ice-rink.jpg") no-repeat center center;
-    background-size: cover;
-    color: black;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
-    padding: 50px 50px 10px 50px;
-    border-radius: 10px;
-    min-height: 400px;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navbar link hover effect */
+.navbar-nav .nav-link.text-white:hover,
+.navbar-nav .nav-link.text-white:focus {
+  color: #ffd700 !important;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Home Section (#home)
+=========================== */
+#home {
+  background: url("../images/ice-rink.jpg") no-repeat center center;
+  background-size: cover;
+  color: black;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  padding: 50px 50px 10px 50px;
+  border-radius: 10px;
+  min-height: 400px;
+  text-align: center; /* Keep here if you want all text centered */
+}
 
 #home h2 {
-    font-size: 2.5rem; /* Bigger heading */
-    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
+  font-size: 2.5rem;
+  text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
 }
 
 #home p {
-    font-size: 1.2rem; /* Bigger paragraph text */
-    text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.9);
 }
+
 
 .sports-stable.centered {
   display: flex;
@@ -181,24 +188,33 @@ footer a:hover {
   margin: 0.3em 0;
 }
 
+/* ===========================
+   Accordions
+=========================== */
 .accordion {
-  background-color: #177ce2;
-  color: white;
-  cursor: pointer;
-  padding: 14px;
-  width: 100%;
+  background: linear-gradient(90deg, #001f4d 60%, #ffd700 100%);
+  color: #fff;
+  font-weight: bold;
   border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
   text-align: left;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
   font-size: 1rem;
-  border-radius: 6px;
-  margin-bottom: 5px;
-  transition: background-color 0.3s ease;
 }
 
-.accordion:hover {
-  background-color: #125fa4;
+.accordion:hover,
+.accordion:focus {
+  background: linear-gradient(90deg, #ffd700 60%, #001f4d 100%);
+  color: #001f4d;
 }
 
+/* Accordion panel */
 .panel {
   padding: 10px 18px;
   background-color: white;
@@ -209,12 +225,34 @@ footer a:hover {
   border-radius: 0 0 6px 6px;
 }
 
+/* ===========================
+   Inductee List & Cards
+=========================== */
 .inductee-list {
   max-width: 1000px;
   margin: 0 auto;
   text-align: left;
   padding: 20px;
 }
+
+.inductee-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.inductee-card h3 {
+  margin-top: 0;
+  color: #177ce2;
+}
+
+.inductee-card p {
+  margin: 0.3em 0;
+}
+
 
 .homepage-buttons {
   margin-top: 30px;
@@ -296,17 +334,27 @@ footer a:hover {
   cursor: pointer;
 }
 
-footer a {
+/* ===========================
+   Footer
+=========================== */
+footer {
+  background-color: #001f4d;
   color: white;
-  text-decoration: underline; /* optional, helps show it’s a link */
+  padding: 20px 0;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: underline;
 }
 
 footer a:hover {
-  color: #aaddff; /* lighter blue on hover for nice effect */
+  color: #ffffff;
 }
 
-
-
+/* ===========================
+   Responsive Styles
+=========================== */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -314,18 +362,28 @@ footer a:hover {
   }
 
   .logo-container {
-    margin-bottom: 10px; /* Space between logo and text */
+    margin-bottom: 10px;
   }
 
   #home h2 {
-    font-size: 2rem; /* Smaller heading on mobile */
+    font-size: 2rem;
   }
 
   #home p {
-    font-size: 1rem; /* Smaller paragraph text on mobile */
+    font-size: 1rem;
+  }
+
+  .sports-stable {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .sports-stable-logo {
+    width: 100%;
+    max-width: 300px;
   }
 }
-
 /* css/custom.css */
 body {
   font-family: 'Segoe UI', sans-serif;
@@ -337,15 +395,10 @@ body {
 }
 
 .hero-section-event {
-  position: relative;
-  min-height: 350px;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  min-height: 600px;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('../assets/img/stickbackground.png') center center/cover no-repeat;
+              url('../assets/img/Screenshot 2024-04-13 team picture.png') center top / cover no-repeat;
+  background-attachment: fixed;  /* <-- added here */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -353,6 +406,8 @@ body {
   text-align: center;
   padding: 3rem 1.5rem;
 }
+
+
 
 .about-section {
   background-color: #ffffff;
@@ -430,3 +485,6 @@ footer a:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+
+
+

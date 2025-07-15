@@ -9,5 +9,8 @@
 		{
 			"path": "usa80plus_v3"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "usa80plus_v3"
+	}
 }
