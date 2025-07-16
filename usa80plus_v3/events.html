@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
   <!-- Structured Data JSON-LD for event -->
   <script type="application/ld+json">
   {
@@ -56,46 +56,153 @@
   </nav>
 
   <main>
-    <section class="hero-section-event">
-    <div class="container text-center py-5">
+  <section class="hero-section-event text-white text-center d-flex align-items-center" 
+           style="min-height: 300px; background: url('assets/img/stable-with-logo.png') center/cover no-repeat; background-blend-mode: multiply; background-color: rgba(0, 31, 77, 0.7);">
+    <div class="container py-5">
       <h1 class="display-4 fw-bold">USA 80+ Hockey Hall of Fame Induction Ceremony</h1>
       <h3 class="mt-3">October 4, 2025 &mdash; Blue Sport Stable</h3>
       <p class="lead mt-3">Afternoon "Legends" Game, Reception, and Induction Banquet</p>
     </div>
   </section>
 
+  <section class="event-details container py-5">
+    <!-- Countdown Timer -->
+    <div id="countdown" class="fs-5 fw-bold text-danger mb-4 text-center"></div>
 
-    <section class="event-details container py-5">
-      <p>
-        People play hockey into their 80's and beyond? There is actually a USA Hockey Hall of Fame for such achievers? 
-        And it’s located at our own Blue Sport Stable? And 35 individuals will be inducted into the first class of the 
-        80+ HHOF this Fall? <strong>YUP!</strong>
-      </p>
+    <h2 class="mb-4">About the Event</h2>
+    <p>People play hockey into their 80's and beyond? There is actually a USA Hockey Hall of Fame for such achievers? 
+    And it’s located at our own Blue Sport Stable? And 35 individuals will be inducted into the first class of the 
+    80+ HHOF this Fall? <strong>YUP!</strong></p>
 
-      <p>
-        Join us on October 4 for the <strong>Legends Game</strong>, followed by a reception sponsored by Long Hockey, 
-        and an evening <strong>Induction Banquet</strong> celebrating these incredible individuals.
-      </p>
+    <p>Join us on October 4 for the <strong>Legends Game</strong>, followed by a reception sponsored by Long Hockey, 
+    and an evening <strong>Induction Banquet</strong> celebrating these incredible individuals.</p>
 
-      <h2>Teaser Information</h2>
-      <ul>
-        <li><strong>Bill Goodacre</strong> – Honored with a special memorial</li>
-        <li><strong>Mark Sertich</strong> – Guinness World Record holder, oldest hockey player in the world</li>
-        <li><strong>Charles Schulz</strong> – Founder of the Snoopy World Ice Hockey Tournament</li>
-        <li><strong>Ginette Hatin</strong> – Only female still playing at 80+</li>
-        <li><strong>Terry Harper</strong> and <strong>Bill Orban</strong> – Only past NHL players still playing at 80+</li>
-        <li>7 members of the USA 80+ Hockey Team (from Colorado) competing in the USA vs. Canada series</li>
-        <li>Other inspiring players and “builders” of the 80+ hockey community</li>
+    <h2 class="mt-5">Featured Inductees & Highlights</h2>
+      <ul class="list-group list-group-flush mb-4">
+        <li class="list-group-item"><strong>Bill Goodacre</strong> – Honored with a special memorial</li>
+        <li class="list-group-item"><strong>Mark Sertich</strong> – Guinness World Record holder, oldest hockey player in the world</li>
+        <li class="list-group-item"><strong>Charles Schulz</strong> – Founder of the Snoopy World Ice Hockey Tournament</li>
+        <li class="list-group-item"><strong>Ginette Hatin</strong> – Only female still playing at 80+</li>
+        <li class="list-group-item"><strong>Terry Harper</strong> and <strong>Bill Orban</strong> – Only past NHL players still playing at 80+</li>
       </ul>
 
-      <p><strong>Updates to follow!!!</strong></p>
-    </section>
-  </main>
+    <div class="bg-white p-3 rounded shadow mt-4">
+      <p class="mb-2">Seven members of the USA 80+ Hockey Team (from Colorado) will compete in the USA vs. Canada series.</p>
+      <p class="mb-0">Other inspiring players and “builders” of the 80+ hockey community will also be recognized.</p>
+    </div>
+    
+    <p class="fw-bold text-danger mt-4" style="font-size: 2rem !important;">Updates to follow!!!</p>
 
-  <footer class="bg-navy text-center py-3">
-    <p class="mb-0">&copy; 2025 USA 80+ Hockey Hall of Fame. All rights reserved.</p>
-  </footer>
+    <p class="text-muted">Check back for more details as we get closer to the event date.</p>    
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer mt-auto py-4 text-center" style="background-color: #001f4d; color: white;">
+  <div class="container">
+
+    <!-- Social Media Icons -->
+    <div class="row justify-content-center mb-3">
+      <div class="col-auto">
+        <a href="https://www.facebook.com/people/USA-80-Hockey-Hall-of-Fame/61577851994757/"
+           target="_blank" rel="noopener noreferrer" class="mx-2 text-white fs-4" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/yourusername/"
+           target="_blank" rel="noopener noreferrer" class="mx-2 text-white fs-4" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="row justify-content-center mb-2">
+      <div class="col-12 col-md-auto">
+        <p class="mb-1">
+          <a href="index.html" class="text-warning text-decoration-none">Home</a> |
+          <a href="about.html" class="text-warning text-decoration-none">About</a> |
+          <a href="inductees.html" class="text-warning text-decoration-none">Inductees</a> |
+          <a href="events.html" class="text-warning text-decoration-none">Events</a> |
+          <a href="nominate.html" class="text-warning text-decoration-none">Nominate</a> |
+          <a href="contact.html" class="text-warning text-decoration-none">Contact</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Info & Credit -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-auto">
+        <p class="mb-1">Contact:
+          <a href="mailto:usa80plusHHOF@gmail.com" class="text-warning">usa80plusHHOF@gmail.com</a>
+        </p>
+        <p class="mb-1">&copy; 2025 USA 80+ Hockey Hall of Fame</p>
+        <p class="mb-1">
+          Inspired by
+          <a href="https://therealironmenofhockey.com/" class="text-warning" target="_blank" rel="noopener noreferrer">The Real Iron Men of Hockey</a> |
+          Info courtesy of
+          <a href="https://www.TeamUSAPlayers.org" class="text-warning" target="_blank" rel="noopener noreferrer">Team USA Players</a>
+        </p>
+        <p class="mb-1 small fst-italic">Not affiliated with the official USA Hockey organization.</p>
+        <p class="mb-0 small">
+          <a href="privacy.html" class="text-warning text-decoration-none">Privacy Policy</a>
+        </p>
+      </div>
+    </div>
+     
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const countdown = () => {
+    const eventDate = new Date("2025-10-04T00:00:00").getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+      document.getElementById("countdown").innerHTML = "The event is happening today!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / 1000 / 60) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+      `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+  };
+
+  setInterval(countdown, 1000);
+  countdown();
+</script>
+
+<!-- Back to Top Button (floating) -->
+<button id="backToTop" class="btn btn-primary position-fixed d-none" 
+        style="bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<script>
+  // Show/hide back to top button
+  window.addEventListener('scroll', function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.remove('d-none');
+    } else {
+      backToTopBtn.classList.add('d-none');
+    }
+  });
+
+  // Smooth scroll to top
+  document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
 </body>
 </html>
+
+

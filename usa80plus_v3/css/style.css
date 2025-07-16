@@ -129,102 +129,6 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.social-icon {
-  font-size: 1.6rem;
-  color: #ffffff;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-  color: #ff0000; /* or #ffd700 for gold hover */
-}
-
-footer a {
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-
-@media (max-width: 768px) {
-  .sports-stable {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem 0;
-  }
-
-  .sports-stable-logo-wrapper,
-  .sports-stable-logo {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-.inductee-list {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 20px;
-}
-
-.inductee-card {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.inductee-card h3 {
-  margin-top: 0;
-  color: #177ce2;
-}
-
-.inductee-card p {
-  margin: 0.3em 0;
-}
-
-/* ===========================
-   Accordions
-=========================== */
-.accordion {
-  background: linear-gradient(90deg, #001f4d 60%, #ffd700 100%);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  outline: none;
-  padding: 1rem 1.5rem;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-  font-size: 1rem;
-}
-
-.accordion:hover,
-.accordion:focus {
-  background: linear-gradient(90deg, #ffd700 60%, #001f4d 100%);
-  color: #001f4d;
-}
-
-/* Accordion panel */
-.panel {
-  padding: 10px 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-  border-left: 4px solid #177ce2;
-  margin-bottom: 15px;
-  border-radius: 0 0 6px 6px;
-}
-
 /* ===========================
    Inductee List & Cards
 =========================== */
@@ -243,15 +147,58 @@ footer a:hover {
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.inductee-card h3 {
-  margin-top: 0;
-  color: #177ce2;
+/* ===========================
+   Accordions
+=========================== */
+.accordion {
+  background: linear-gradient(90deg, #001f4d 60%, #dc3545 100%);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  font-size: 1rem;
 }
 
-.inductee-card p {
-  margin: 0.3em 0;
+.accordion:hover,
+.accordion:focus {
+  background: linear-gradient(90deg, #dc3545 60%, #001f4d 100%);
+  color: #001f4d;
 }
+
+/* Accordion panel */
+.panel {
+  padding: 10px 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+  margin-bottom: 15px;
+  border-radius: 0 0 6px 6px;
+}
+
+.accordion::after {
+  content: '\25BC'; /* Downward chevron */
+  float: right;
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.accordion.active::after {
+  transform: rotate(180deg); /* Flip icon when open */
+}
+
+
+/* ===========================
+   Inductee List & Cards
+=========================== */
 
 
 .homepage-buttons {
@@ -294,25 +241,61 @@ footer a:hover {
   color: #fff !important;
 }
 
-.sports-stable-logo:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: brightness(1.1);
+/* ===========================
+   Inductee Scroll Animation
+=========================== */
+
+.inductee-scroll-fader {
+  position: relative;
+  overflow: hidden;
+  background-color: #001f4d; /* Updated navy */
+  border-bottom: 3px solid #177ce2;
+}
+
+.inductee-scroll-fader::before,
+.inductee-scroll-fader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.inductee-scroll-fader::before {
+  left: 0;
+  background: linear-gradient(to right, #001f4d, transparent);
+}
+
+.inductee-scroll-fader::after {
+  right: 0;
+  background: linear-gradient(to left, #001f4d, transparent);
 }
 
 .inductee-scroll {
+  display: flex;
   overflow: hidden;
-  background-color: #004080;
-  color: white;
-  padding: 10px 0;
-  border-bottom: 3px solid #177ce2;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+.inductee-scroll:hover {
+  animation-play-state: paused;
+  cursor: pointer;
 }
 
 .scroll-track {
   display: inline-block;
-  white-space: nowrap;
-  padding-left: 100%;
-  animation: scroll-left 20s linear infinite;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #001f4d;
+}
+
+.scroll-track span {
+  margin: 0 20px;
+  font-weight: bold;
 }
 
 @keyframes scroll-left {
@@ -323,33 +306,208 @@ footer a:hover {
     transform: translateX(-100%);
   }
 }
+/* css/custom.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
 
-.inductee-scroll span {
-  font-size: 1.2rem;
+.bg-navy {
+  background-color: #001f4d;
+  color: #fff;
+}
+
+.hero-section-event {
+  min-height: 600px;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../assets/img/Screenshot 2024-04-13 team picture.png') center top / cover no-repeat;
+  background-attachment: fixed;  /* <-- added here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.about-section {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 30px;
+  text-align: left;
+}
+
+.about-section h1, .about-section h2 {
+  color: #c00;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.hero-section-about {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('../assets/img/stickbackground.png') center center/cover no-repeat;
+  color: white;
+  padding: 10rem 2rem;
+  text-align: center;
+}
+
+.hero-section-about h1 {
+  font-size: 3rem;
   font-weight: bold;
 }
 
-.scroll-track:hover {
-  animation-play-state: paused;
+.hero-section-about p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.7); /* white at 70% opacity */
+  /* Optional: keep rounded corners and shadow */
+  border-radius: 0.25rem;  /* same as Bootstrap .rounded */
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* similar to Bootstrap .shadow */
+}
+
+.full-width-divider {
+  background-color: #fff;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  z-index: 1;
+}
+
+#sponsors img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.sports-stable-logo:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(1.1);
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-control:focus {
+  border-color: #dc3545; /* bootstrap danger red */
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #c82333, #dc3545);
+  border: none;
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+}
+
+/* Sponsors Section */
+
+.sponsors-section {
+  background: #f8f9fa;
+  border-top: 2px solid #001f4d;
+  border-bottom: 2px solid #001f4d;
+}
+
+.sponsors-title {
+  color: #001f4d;
+}
+
+.sponsor-logo {
+  max-width: 180px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-caption {
+  font-weight: bold;
+  color: #001f4d;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.sponsor-link:hover,
+.sponsor-link:focus {
   cursor: pointer;
+}
+
+.sponsor-link:hover .sponsor-logo,
+.sponsor-link:focus .sponsor-logo {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 31, 77, 0.4);
+}
+
+.sponsor-link:hover .sponsor-caption,
+.sponsor-link:focus .sponsor-caption {
+  color: #b22222; /* rich red on hover */
 }
 
 /* ===========================
    Footer
 =========================== */
+
 footer {
   background-color: #001f4d;
   color: white;
   padding: 20px 0;
+  text-align: center;
 }
 
-footer a {
-  color: #ffd700;
+/* General footer links (but NOT social media icons) */
+footer a:not(.text-white) {
+  color: #ffffff !important; /* Changed to white for better contrast */
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+footer a:not(.text-white):hover {
+  color: #ffd700 !important; /* Gold on hover */
   text-decoration: underline;
 }
 
-footer a:hover {
-  color: #ffffff;
+/* Social media icons styling */
+footer a.text-white {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+footer a.text-white:hover {
+  color: #ffd700 !important;
+}
+
+footer a.text-white:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffd700;
+}
+
+footer a.text-white:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
 }
 
 /* ===========================
@@ -384,107 +542,34 @@ footer a:hover {
     max-width: 300px;
   }
 }
-/* css/custom.css */
-body {
-  font-family: 'Segoe UI', sans-serif;
+
+/* Adds vertical spacing between stacked items on smaller screens */
+@media (max-width: 767.98px) {
+  .sponsor-link {
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .sports-stable {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .sports-stable-logo-wrapper,
+  .sports-stable-logo {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
-.bg-navy {
-  background-color: #001f4d;
-  color: #fff;
-}
-
-.hero-section-event {
-  min-height: 600px;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url('../assets/img/Screenshot 2024-04-13 team picture.png') center top / cover no-repeat;
-  background-attachment: fixed;  /* <-- added here */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  padding: 3rem 1.5rem;
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem 1rem;
+  }
 }
 
 
-
-.about-section {
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  margin-top: 30px;
-  text-align: left;
-}
-
-.about-section h1, .about-section h2 {
-  color: #c00;
-  margin-bottom: 20px;
-}
-
-.about-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #333;
-}
-
-.hero-section-about {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('../images/about-hero.jpg') center center/cover no-repeat;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.hero-section-about h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.hero-section-about p {
-  font-size: 1.3rem;
-  margin-top: 1rem;
-}
-
-footer {
-  background-color: #001f4d;
-  color: white;
-  padding: 20px 0;
-}
-
-footer a {
-  color: #ffd700;
-}
-
-footer a:hover {
-  color: #ffffff;
-}
-
-.bg-white-transparent {
-  background-color: rgba(255, 255, 255, 0.7); /* white at 70% opacity */
-  /* Optional: keep rounded corners and shadow */
-  border-radius: 0.25rem;  /* same as Bootstrap .rounded */
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* similar to Bootstrap .shadow */
-}
-
-.full-width-divider {
-  background-color: #fff;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  height: 18px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
-  z-index: 1;
-}
-
-#sponsors img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
 
 
 

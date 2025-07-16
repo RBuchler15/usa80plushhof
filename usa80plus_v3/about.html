@@ -76,22 +76,22 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section bg-light text-center py-5">
+<section class="hero-section-about text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold text-danger">About the USA 80+ Hockey Hall of Fame</h1>
-      <p class="lead">Celebrating the passion, dedication, and achievements of hockey players and builders aged 80 and over.</p>
-    </div>
-  </section>
+    <h1 class="display-4 fw-bold text-danger">About the USA 80+ Hockey Hall of Fame</h1>
+    <p class="lead">Celebrating the passion, dedication, and achievements of hockey players and builders aged 80 and over.</p>
+  </div>
+</section>
 
-  <!-- About Content -->
-  <section class="py-5">
+<!-- About Content -->
+<section class="py-5">
   <div class="container">
     <div class="bg-white rounded shadow p-4">
       <p>
         Founded to honor the enduring spirit of senior hockey players, the <strong>USA 80+ Hockey Hall of Fame</strong> celebrates individuals aged 80 and above who continue to inspire on and off the ice. These are not just athletes — they are pioneers, mentors, and lifelong stewards of the game.
       </p>
       <p>
-        Our Hall of Fame resides at the <a href="https://www.bluesportstable.com" target="_blank" rel="noopener noreferrer">Blue Sport Stable</a> in Superior, Colorado. This fitting location was chosen in part due to its ties to <a href="https://therealironmenofhockey.com/" target="_blank" rel="noopener noreferrer">The Real Iron Men of Hockey</a></strong> — a group whose resilience, camaraderie, and love for the game sparked a movement that led to the creation of this Hall.
+        Our Hall of Fame resides at the <a href="https://www.bluesportstable.com" target="_blank" rel="noopener noreferrer">Blue Sport Stable</a> in Superior, Colorado. This fitting location was chosen in part due to its ties to <a href="https://therealironmenofhockey.com/" target="_blank" rel="noopener noreferrer">The Real Iron Men of Hockey</a> — a group whose resilience, camaraderie, and love for the game sparked a movement that led to the creation of this Hall.
       </p>
       <p>
         We invite you to <a href="nominate.html">nominate a hockey legend</a>, <a href="events.html">attend an upcoming celebration</a>, or simply explore the stories of our inspiring <a href="inductees.html">inductees</a>. Join us in honoring those who show that hockey truly is a lifelong passion.
@@ -100,15 +100,85 @@
   </div>
 </section>
 
+<!-- Footer -->
+<footer class="footer mt-auto py-4 text-center" style="background-color: #001f4d; color: white;">
+  <div class="container">
 
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-      &copy; 2024 USA 80+ Hockey Hall of Fame. All rights reserved.
+    <!-- Social Media Icons -->
+    <div class="row justify-content-center mb-3">
+      <div class="col-auto">
+        <a href="https://www.facebook.com/people/USA-80-Hockey-Hall-of-Fame/61577851994757/"
+           target="_blank" rel="noopener noreferrer" class="mx-2 text-white fs-4" aria-label="Facebook">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/yourusername/"
+           target="_blank" rel="noopener noreferrer" class="mx-2 text-white fs-4" aria-label="Instagram">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Navigation Links -->
+    <div class="row justify-content-center mb-2">
+      <div class="col-12 col-md-auto">
+        <p class="mb-1">
+          <a href="index.html" class="text-warning text-decoration-none">Home</a> |
+          <a href="about.html" class="text-warning text-decoration-none">About</a> |
+          <a href="inductees.html" class="text-warning text-decoration-none">Inductees</a> |
+          <a href="events.html" class="text-warning text-decoration-none">Events</a> |
+          <a href="nominate.html" class="text-warning text-decoration-none">Nominate</a> |
+          <a href="contact.html" class="text-warning text-decoration-none">Contact</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Contact Info & Credit -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-auto">
+        <p class="mb-1">Contact:
+          <a href="mailto:usa80plusHHOF@gmail.com" class="text-warning">usa80plusHHOF@gmail.com</a>
+        </p>
+        <p class="mb-1">&copy; 2025 USA 80+ Hockey Hall of Fame</p>
+        <p class="mb-1">
+          Inspired by
+          <a href="https://therealironmenofhockey.com/" class="text-warning" target="_blank" rel="noopener noreferrer">The Real Iron Men of Hockey</a> |
+          Info courtesy of
+          <a href="https://www.TeamUSAPlayers.org" class="text-warning" target="_blank" rel="noopener noreferrer">Team USA Players</a>
+        </p>
+        <p class="mb-1 small fst-italic">Not affiliated with the official USA Hockey organization.</p>
+        <p class="mb-0 small">
+          <a href="privacy.html" class="text-warning text-decoration-none">Privacy Policy</a>
+        </p>
+      </div>
+    </div> 
+  </div>
+  </footer>     
+
+  <!-- Back to Top Button (floating) -->
+  <button id="backToTop" class="btn btn-primary position-fixed d-none d-flex align-items-center justify-content-center p-0" 
+        style="bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<script>
+  // Show/hide back to top button
+  window.addEventListener('scroll', function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.remove('d-none');
+    } else {
+      backToTopBtn.classList.add('d-none');
+    }
+  });
+
+  // Smooth scroll to top
+  document.getElementById('backToTop').addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
+
