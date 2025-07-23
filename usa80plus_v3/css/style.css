@@ -569,6 +569,14 @@ footer a.text-white:active {
   }
 }
 
+.nav-link.btn-danger {
+  border: 2px solid #c00;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+
+
 
 
 
