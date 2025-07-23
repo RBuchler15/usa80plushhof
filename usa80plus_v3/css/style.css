@@ -575,7 +575,34 @@ footer a.text-white:active {
   font-weight: 600;
 }
 
+.hero-section-event {
+  min-height: 600px; /* large on desktop */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../assets/img/team-photo.png') center top / cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
 
+/* Shrink container on small screens */
+@media (max-width: 768px) {
+  .hero-section-event {
+    min-height: 300px; /* less height = image is visually smaller */
+    padding: 2rem 1rem;
+    background-position: center center; /* adjust if needed */
+  }
+
+  .hero-section-event h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section-event p {
+    font-size: 1rem;
+  }
+}
 
 
 
