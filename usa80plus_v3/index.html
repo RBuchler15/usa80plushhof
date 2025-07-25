@@ -3,328 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Official site of the USA 80+ Hockey Hall of Fame. Honoring legendary American hockey players over 80 years old." />
-  <meta name="keywords" content="USA 80+ Hockey Hall of Fame, senior hockey, hockey legends, hockey history, inductees, nominate, events" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="USA 80+ Hockey Hall of Fame" />
-  <meta property="og:description" content="Honoring hockey legends aged 80 and over. Join the USA 80+ Hockey Hall of Fame." />
-  <meta property="og:image" content="https://usa80plushockeyhalloffame.com/assets/img/logo_transparent.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://usa80plushockeyhalloffame.com" />
-  
-  <title>USA 80+ Hockey Hall of Fame | Celebrating Senior Hockey Legends in America</title>
-  
-  <meta name="theme-color" content="#001f4d" />
-  <meta name="author" content="USA 80+ Hockey Hall of Fame" /> 
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-  <link href="css/style.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  
-  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png" />
- 
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "USA 80+ Hockey Hall of Fame",
-    "url": "https://usa80plushockeyhalloffame.com/",
-    "logo": "https://usa80plushockeyhalloffame.com/assets/img/logo_transparent.png",
-    "sameAs": [
-      "https://www.facebook.com/USA80PlusHockeyHallOfFame",
-      "https://twitter.com/USA80PlusHockeyHallOfFame",
-      "https://www.instagram.com/USA80PlusHockeyHallOfFame"
-    ],
-    "description": "Honoring legendary American hockey players over 80 years old."
-  }
-  </script> 
+  <meta http-equiv="refresh" content="5;url=https://www.usa80plushockeyhalloffame.com">
+  <title>USA 80+ Hockey Hall of Fame</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+    :root {
+      --primary-color: #002F6C;
+      --accent-color: #ff4136;
+      --text-color: #ffffff;
+    }
 
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--primary-color);
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    .splash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom right, var(--primary-color), #005aad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: fadeOut 2s ease-in-out forwards;
+      animation-delay: 2.5s;
+      z-index: 2;
+    }
+
+    .splash img {
+      max-width: 200px;
+      width: 60%;
+      animation: popIn 2s ease-out;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .content {
+      opacity: 0;
+      animation: contentFade 1s ease-out forwards;
+      animation-delay: 3s;
+      z-index: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    @keyframes contentFade {
+      to { opacity: 1; }
+    }
+
+    .logo {
+      max-width: 140px;
+      margin: 0 auto 16px;
+      display: block;
+      opacity: 0;
+      animation: logoFade 2s ease-out forwards;
+      animation-delay: 3s;
+    }
+
+    @keyframes logoFade {
+      to { opacity: 1; }
+    }
+
+    .content h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      margin: 10px auto 20px;
+      max-width: 90%;
+      line-height: 1.4;
+      opacity: 0;
+      animation: messageFade 1.5s ease-out forwards;
+      animation-delay: 3.2s;
+    }
+
+    @keyframes messageFade {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content a {
+      padding: 12px 22px;
+      font-size: 1rem;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      text-decoration: none;
+      border-radius: 40px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .content a:hover {
+      background-color: #e63e00;
+      transform: scale(1.05);
+    }
+
+    .rink-footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        #002F6C,
+        #002F6C 10px,
+        #005AAD 10px,
+        #005AAD 20px
+      );
+      color: white;
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 10px 0;
+      border-top: 2px solid #ff4136;
+      font-weight: 600;
+      letter-spacing: 0.7px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 -2px 6px rgba(0,0,0,0.2);
+    }
+
+    @media (min-width: 600px) {
+      .content h1 { font-size: 2.4rem; }
+      .content p { font-size: 1.25rem; }
+      .content a { font-size: 1.1rem; }
+      .logo { max-width: 160px; }
+      .rink-footer { font-size: 0.95rem; }
+    }
+  </style>
 </head>
-
-<body style="padding-top:0; margin-top:0;">
-
-
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #001f4d;">
-    <div class="container-fluid px-4">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="assets/img/logo_transparent.png" alt="USA 80+ HHOF Logo" style="height:60px; width:auto; margin-right:14px;" />
-        USA 80+ HHOF
-      </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active text-white" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="inductees.html">Inductees</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="events.html">Events</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="nominate.html">Nominate</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>            
-          <li class="nav-item">
-          <li class="nav-item">
-            <ul class="navbar-nav">
-          <li class="nav-item">
-            <a href="https://www.paypal.com/donate?hosted_button_id=R8VVBNZQJLMEL" target="_blank" rel="noopener noreferrer" class="btn btn-danger px-3 py-1">
-          Donate
-        </a>
-          </li>
-        </ul>
-
-
-          </li>                
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero-section-event">
-    <div class="container text-center">
-      <h1 class="display-4 fw-bold">USA 80+ Hockey Hall of Fame</h1>
-      <p class="lead">Honoring the Legends of the Game</p>
-    </div>
-  </section>
-
-  <div class="inductee-scroll-fader">
-  <div class="inductee-scroll">
-    <div class="scroll-track">
-      <span>🎖 Charles M. Schulz</span>
-      <span>🎖 Dave Canaday</span>
-      <span>🎖 Ginette Hatin</span>
-      <span>🎖 Mark Sertich</span>
-      <span>🎖 Terry Harper</span>
-      <span>🎖 Bill Orban</span>
-      <span>🎖 Bill Goodacre</span>
-      <span>🎖 and more!</span>
-    </div>
-  </div>
-</div>
-
-
-  <!-- Upcoming Event -->
-<section id="event" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-3 text-uppercase fw-bold" style="color:#001f4d;">Upcoming Event</h2>
-    <p class="lead fs-4 text-dark">Join us for the USA 80+ Hockey Hall of Fame Induction Ceremony</p>
-    <p><strong>Date:</strong> October 4, 2025</p>
-    <p><strong>Location:</strong> Blue Sport Stable, Superior, Colorado</p>
-    <p class="mt-3 mb-4">Afternoon "Legends" Game, Reception, and Induction Banquet</p>
-
-    <!-- Images and Text Row -->
-<div class="container">
-  <div class="row justify-content-center align-items-center fade-in">
-    <!-- Left Image -->
-    <div class="col-6 col-md-3 mb-4 mb-md-0">
-      <img src="assets/img/Screenshot 2024-10-27 at 11.26.42 AM.png" alt="Senior hockey player" class="img-fluid rounded shadow" />
-      <p class="mt-2 text-muted small">Legend on the Ice</p>
-    </div>
-
-    <!-- Center Text -->
-    <div class="col-12 col-md-4 mb-4">
-      <div class="bg-white bg-opacity-75 rounded p-3 shadow border border-danger">
-        <h5 class="fw-bold text-danger">Celebrating Senior Hockey Legends</h5>
-        <p class="small">Witness greatness. Cheer on players aged 80+ as we honor their contributions to the game.</p>
-      </div>
-    </div>
-
-    <!-- Right Image -->
-    <div class="col-6 col-md-3">
-      <img src="assets/img/Screenshot 2024-10-27 goalie.png" alt="Senior hockey goalie" class="img-fluid rounded shadow" />
-      <p class="mt-2 text-muted small">Goalie Greatness</p>
-    </div>
+<body>
+  <div class="splash">
+    <img src="assets/img/logo.png" alt="USA 80+ Hockey Hall of Fame Logo" />
   </div>
 
-  <!-- Countdown + Button Container below images and text -->
-  <div class="text-center my-3">
-    <div id="countdown" class="fs-5 fw-bold text-danger mb-2"></div>
-    <a href="events.html" class="btn btn-danger btn-lg fw-bold shadow px-4 py-2">
-      <i class="bi bi-calendar-event me-2"></i>
-      Learn More About the Event
-    </a>
+  <div class="content">
+    <img src="assets/img/logo.png" alt="USA 80+ Hockey Hall of Fame Logo" class="logo" />
+    <h1>USA 80+ Hockey Hall of Fame</h1>
+    <p>Celebrating champions who never stopped skating—this is where their legacy lives on.</p>
+    <a href="https://www.usa80plushockeyhalloffame.com" target="_blank">Enter the Hall 🏅</a>
   </div>
-</div>
 
-  </div>
-</section>
-
-
- <div class="container my-5 text-center bg-light p-4 rounded shadow-sm">
-  <img src="assets/img/1956 Andrea hockey team-topaz--enhance-faceai-.jpg" alt="Tony Andrea" class="img-fluid mb-2 mx-auto" style="max-width: 300px;" />
-  <p class="text-muted mb-3 fst-italic">Tony Andrea</p>
-  <h2 class="mb-3">Nominate a Hockey Legend</h2>
-  <p class="mb-4 lead">Help us honor the incredible contributions of hockey legends over 80 years old. Your nomination keeps their legacy alive!</p>
-  <a href="nominate.html" class="btn btn-primary btn-lg px-4">Nominate Now</a>
-</div>
-
-
-
-  <!-- Contact CTA -->
-  <section class="container my-5 text-center">
-    <h2>Contact Us</h2>
-    <p>For nominations, sponsorships, or general inquiries, please visit our <a href="contact.html" class="text-danger">Contact Page</a>.</p>
-    <p>Email: <a href="mailto:usa80plusHHOF@gmail.com">usa80plusHHOF@gmail.com</a></p>
-  </section>
-
-  <!-- Sponsors Section -->
-<section id="sponsors" class="py-5 sponsors-section">
-  <div class="container text-center">
-    <h2 class="mb-4 sponsors-title">Our Sponsors</h2>
-    <div class="row justify-content-center align-items-center gy-4">
-      <div class="col-12 col-md-4 col-lg-3">
-        <a href="https://therealironmenofhockey.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link d-block p-3 rounded">
-          <img src="assets/img/ironman-logo.jpg" alt="The Real Iron Men of Hockey" class="sponsor-logo mx-auto d-block" />
-          <div class="sponsor-caption mt-2">The Real Iron Men of Hockey</div>
-        </a>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <a href="https://www.bluesportstable.com/" target="_blank" rel="noopener noreferrer" class="sponsor-link d-block p-3 rounded">
-          <img src="assets/img/blue-sports-stable-logo.png" alt="Blue Sport Stable logo" class="sponsor-logo mx-auto d-block" />
-          <div class="sponsor-caption mt-2">Blue Sport Stable</div>
-        </a>
-      </div>
-      <div class="col-12 col-md-4 col-lg-3">
-        <a href="long-hockey.html" class="sponsor-link d-block p-3 rounded">
-          <img src="assets/img/long-hockey-logo-removebg.png" alt="Long Hockey logo" class="sponsor-logo mx-auto d-block" />
-          <div class="sponsor-caption mt-2">Long Hockey</div>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Footer -->
-<footer class="footer mt-auto py-4 text-center" style="background-color: #001f4d; color: white;">
-  <div class="container">
-
-    <!-- Social Media Icons -->
-    <div class="row justify-content-center mb-3">
-      <div class="col-auto">
-        <a href="https://www.facebook.com/people/USA-80-Hockey-Hall-of-Fame/61577851994757/"
-           target="_blank" rel="noopener noreferrer" class="mx-2 text-white fs-4" aria-label="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <!--<a href="https://www.instagram.com/yourusername/"
-           target="_blank" rel="noopener noreferrer" class="mx-2 text-white fs-4" aria-label="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
-      -->
-      </div>
-    </div>
-
-    <!-- Navigation Links -->
-    <div class="row justify-content-center mb-2">
-      <div class="col-12 col-md-auto">
-        <p class="mb-1">
-          <a href="index.html" class="text-warning text-decoration-none">Home</a> |
-          <a href="about.html" class="text-warning text-decoration-none">About</a> |
-          <a href="inductees.html" class="text-warning text-decoration-none">Inductees</a> |
-          <a href="events.html" class="text-warning text-decoration-none">Events</a> |
-          <a href="nominate.html" class="text-warning text-decoration-none">Nominate</a> |
-          <a href="contact.html" class="text-warning text-decoration-none">Contact</a>
-        </p>
-      </div>
-    </div>
-
-    <!-- Contact Info & Credit -->
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-auto">
-        <p class="mb-1">Contact:
-          <a href="mailto:usa80plusHHOF@gmail.com" class="text-warning">usa80plusHHOF@gmail.com</a>
-        </p>
-        <p class="mb-1">&copy; 2025 USA 80+ Hockey Hall of Fame</p>
-        <p class="mb-1">
-          Inspired by
-          <a href="https://therealironmenofhockey.com/" class="text-warning" target="_blank" rel="noopener noreferrer">The Real Iron Men of Hockey</a> |
-          Info courtesy of
-          <a href="https://www.TeamUSAPlayers.org" class="text-warning" target="_blank" rel="noopener noreferrer">Team USA Players</a>
-        </p>
-        <p class="mb-1 small fst-italic">Not affiliated with the official USA Hockey organization.</p>
-        <p class="mb-0 small">
-          <a href="privacy.html" class="text-warning text-decoration-none">Privacy Policy</a>
-        </p>
-      </div>
-    </div>    
-</footer> 
-
-<!-- Scripts -->  
-  <script>
-// Countdown Timer
-const countdown = () => {
-  const eventDate = new Date("2025-10-04T00:00:00").getTime();
-  const now = new Date().getTime();
-  const distance = eventDate - now;
-
-  if (distance <= 0) {
-    document.getElementById("countdown").innerHTML = "The event is happening today!";
-    return;
-  }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((distance / 1000 / 60) % 60);
-  const seconds = Math.floor((distance / 1000) % 60);
-
-  document.getElementById("countdown").innerHTML =
-    `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
-};
-
-setInterval(countdown, 1000);
-countdown();
-
-// Fade-in on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-    }
-  });
-});
-
-document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
-</script>
-
-<!-- Back to Top Button (floating) -->
-  <button id="backToTop" class="btn btn-primary position-fixed d-none d-flex align-items-center justify-content-center p-0" 
-        style="bottom: 20px; right: 20px; z-index: 1000; border-radius: 50%; width: 50px; height: 50px;">
-  <i class="bi bi-arrow-up"></i>
-</button>
-
-<script>
-  // Show/hide back to top button
-  window.addEventListener('scroll', function() {
-    const backToTopBtn = document.getElementById('backToTop');
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.remove('d-none');
-    } else {
-      backToTopBtn.classList.add('d-none');
-    }
-  });
-
-  // Smooth scroll to top
-  document.getElementById('backToTop').addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
-  
-
+  <footer class="rink-footer">
+    usa80plushockeyhalloffame.com
+  </footer>
 </body>
 </html>
